@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+      <div class="w-full bg-blue-500 px-6 py-4 flex items-center gap-64">
+       <h1 class="text-white font-semibold text-2xl">Quiz App</h1>
+       <p class="text-white font-medium text-[16px]">"There are 5 questions for you. There is 1 mark for each question."</p>
+      </div>
+      <div id="container" class="border w-[600px] mx-auto mt-20 rounded-lg border-gray-300 flex flex-col">
+        <div class="w-full p-4">
+            <h1 class="text-black font-semibold text-xl" id="question"></h1>
+        </div>
+       <hr>
+       <div class="flex flex-col gap-4 items-start mt-6 p-4">
+        <div class="flex items-center gap-2 border w-[400px] p-2 rounded-lg border-gray-400  text-blue-500 font-medium"><input type="radio" id="option1" name="option" value=""  onchange="checkAnswer(event)"><p id="answer1"></p></div>
+        <div class="flex items-center gap-2 border w-[400px] p-2 rounded-lg border-gray-400  text-blue-500 font-medium"><input type="radio" id="option2" name="option" value=""  onchange="checkAnswer(event)"><p id="answer2"></p></div>
+        <div class="flex items-center gap-2 border w-[400px] p-2 rounded-lg border-gray-400  text-blue-500 font-medium"><input type="radio" id="option3" name="option" value=""  onchange="checkAnswer(event)"><p id="answer3"></p></div>
+        <div class="flex items-center gap-2 border w-[400px] p-2 rounded-lg border-gray-400  text-blue-500 font-medium"><input type="radio" id="option4" name="option" value=""  onchange="checkAnswer(event)"><p id="answer4"></p></div>
+       </div>
+       <hr>
+        <div class="p-4">
+            <button type="button" class="border px-4 py-1 bg-blue-500 rounded-xl text-white font-medium" id="submit">Submit</button>
+        </div>
+      </div>
+      <div id="resultContainer" class="hideen w-[400px] mx-auto mt-20 rounded-lg border border-gray-300 text-center p-10">
+            <h1 id="title" class="font-semibold text-xl mb-2"></h1>
+            <p id="subtitle" class="font-semibold text-sm mb-4"></p>
+            <button type="button" class="border px-4 py-1 bg-blue-500 rounded-xl text-white font-medium" onclick="reloadPage()">try again</button>
+      </div>
+    <script src="app.js"></script>
+</body>
+</html>
